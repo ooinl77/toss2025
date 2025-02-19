@@ -5,25 +5,25 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
-//인덱스(루트, 시작) 페이지 요청
-//오쳥: localhost:3000/
+//인덱스(루트,시작) 페이지 요청
+//요청: localhost:3000/
 app.get("/", (req, res) => {
   res.status(200);
   res.send("Hello Express~");
 });
-//오쳥: localhost:3000/login-form
+//요청: localhost:3000/login-form
 app.get("/login-form", (req, res) => {
   res.status(200);
-  res.send("로그인 페이지입니다");
+  res.send("로그인 페이지입니다.");
 });
-//오쳥: localhost:3000/login
+//요청: localhost:3000/login
 app.get("/login", (req, res) => {
   res.status(200);
-  res.send("로그인 성공 했습니다");
+  res.send("로그인 성공했습니다.");
 });
-app.get("/joinForm", () => {});
+app.get("/join-form", () => {});
 app.get("/join", () => {});
-//오쳥: localhost:3000/posts
+//요청: localhost:3000/posts
 app.get("/posts", (req, res) => {
   res.status(200);
   res.send("게시글 목록입니다.");

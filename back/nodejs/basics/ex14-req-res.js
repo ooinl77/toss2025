@@ -1,3 +1,5 @@
+//ex14-req-res.js
+
 //익스프레스의 요청 객체와 응답 객체
 
 //요청객체의 주요 속성
@@ -6,10 +8,10 @@
 //              클라이언트에 저장된 임시값(장바구니-비회원) 저장하는 용도
 //req.headers : 서버로 요청을 보낼 때 같이 보낸 헤더 정보를 담고 있음.
 //req.params : URL 뒤에 파라미터가 포함되어 있는 경우에 파라미터 정보를 담고 있음.
-//             locathost:3000/posts/100 -> params.id = 100
+//             localhost:3000/posts/100 -> params.id = 100
 //req.query : 요청 URL의 포함된 질의 매개변수(query)를 담고 있음.
 //            localhost:3000/login?id=hong&pw=1234
-//            { "id": "hong", "pw": "1234"}
+//            { "id" : "hong", "pw": "1234" }
 
 //응답객체의 주요 속성
 //res.download : 파일을 다운로드할 때 사용함.
@@ -31,21 +33,21 @@ const port = 3000;
 
 app.get("/", (req, res) => {
   res.status(200);
-
-  // content-type: text/html; charset=utf-8
-  // res.send("hello express");
-
-  // content-type: application/json; charset=utf-8
+  //content-type: text/html; charset=utf-8
+  //res.send('Hello Express~')
+  //content-type: application/json; charset=utf-8
   // JS객체를 문자열로 변환해서(JSON.stringify) 응답함. 응답헤더도 json변경.
-  res.json({ message: "hello express" });
+  res.json({ message: "Hello json~" });
 });
 app.get("/login", (req, res) => {
   console.log("회원가입으로 이동합니다.");
   res.redirect("/join");
+  //res.redirect('https://www.google.com')
 });
 app.get("/join", (req, res) => {
-  console.log("회원가입 홈입니다.");
+  console.log("회원가입 폼입니다.");
 });
+
 app.listen(port, () => {
   console.log(`${port}번 포트에서 서버 실행 중...`);
 });
