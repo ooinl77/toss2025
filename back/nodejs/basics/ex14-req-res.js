@@ -26,7 +26,7 @@
 //res.sendFile : 지정한 경로의 파일을 읽어서 내용을 전송한다.
 //res.sendStatus : 상태 메시지와 함께 HTTP 상태 코드를 전송한다.
 //res.status : 응답의 상태 코드를 설정한다.
-
+console.log("파일 실행됨");
 const express = require("express");
 const app = express();
 const port = 3000;
@@ -41,8 +41,8 @@ app.get("/", (req, res) => {
 });
 app.get("/login", (req, res) => {
   console.log("회원가입으로 이동합니다.");
-  res.redirect("/join");
-  //res.redirect('https://www.google.com')
+  // res.redirect("/join");
+  res.redirect("https://www.google.com");
 });
 app.get("/join", (req, res) => {
   console.log("회원가입 폼입니다.");
