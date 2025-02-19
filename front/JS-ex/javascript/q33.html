@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function one(n) {
+        function two(val) {
+          /* 빈칸을 입력하세요. */
+          return Math.pow(val, n);
+        }
+        return two;
+      }
+
+      const a = one(2);
+      const b = one(3);
+      const c = one(4);
+
+      console.log(a(10));
+      console.log(b(10));
+      console.log(c(10));
+    </script>
+  </head>
+  <body></body>
+</html>

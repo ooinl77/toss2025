@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var names = ["장미", "수선화", "진달래"];
+      console.log("문제 1");
+      for (let index in names) {
+        console.log(names[index]);
+      }
+      console.log("문제 2");
+      for (let index of names) {
+        console.log(index);
+      }
+      console.log("문제 3");
+      for (let index of names) {
+        if (index.length == 2) console.log(index);
+      }
+      console.log("문제 4");
+      names.forEach((val) => {
+        console.log(val);
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

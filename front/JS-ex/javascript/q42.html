@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let a = Number(prompt(""));
+      let b = Number(prompt(""));
+      let day = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+      let d = ["tmp", "sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+      function solution() {
+        let t = b; // 입력된 일수
+        for (let i = 0; i < a - 1; i++) {
+          t += day[i]; // 이전 월들의 일수 합산
+        }
+
+        t = ((t % 7) + 3) % 7;
+        console.log(d[t]);
+
+        return d[t];
+      }
+      solution();
+    </script>
+  </head>
+  <body></body>
+</html>

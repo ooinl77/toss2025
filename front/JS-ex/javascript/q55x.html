@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      nationWidth = {
+        korea: 220877,
+        Rusia: 17098242,
+        China: 9596961,
+        France: 543965,
+        Japan: 377915,
+        England: 242900,
+      };
+      let min = 99999999999999;
+      let nation = "";
+      for (let a in nationWidth) {
+        if (a != "korea") {
+          if (min > Math.abs(nationWidth["korea"] - nationWidth[a])) {
+            min = Math.abs(nationWidth["korea"] - nationWidth[a]);
+            nation = a;
+          }
+        }
+      }
+      console.log(nation, min);
+    </script>
+  </head>
+  <body></body>
+</html>

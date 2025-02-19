@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let flag = true;
+      let count = 0;
+      let lucky = [];
+      let min = 100000000000000;
+      let max = 0;
+      document.write("문제 7<br>");
+      for (let i = 2; i <= 100; i++) {
+        let flag = true;
+        for (let j = 2; j <= Math.sqrt(i); j++) {
+          if (i % j == 0) {
+            flag = false;
+            break;
+          }
+        }
+        if (flag) {
+          count++;
+        }
+      }
+      document.write("약수의 개수 = " + count + "<br>");
+      document.write("<br>");
+      document.write("문제 8<br>");
+      for (let i = 0; i < 6; i++) {
+        lucky[i] = Math.floor(Math.random() * 45) + 1;
+        for (let j = 0; j < i; j++) {
+          if (lucky[i] == lucky[j]) {
+            i--;
+            continue;
+          }
+        }
+      }
+      for (let i = 0; i < 6; i++) {
+        document.write(lucky[i] + " ");
+      }
+
+      document.write("<br>");
+      document.write("<br>");
+      document.write("문제 9<br>");
+      for (let i = 0; i < 10; i++) {
+        let dice1 = Math.floor(Math.random() * 6) + 1;
+        let dice2 = Math.floor(Math.random() * 6) + 1;
+        let sum = dice1 + dice2;
+        if (sum > max) {
+          max = sum;
+        }
+        if (sum < min) {
+          min = sum;
+        }
+      }
+      document.write("max = " + max + "<br>");
+      document.write("min = " + min + "<br>");
+
+      document.write("<br>");
+    </script>
+  </head>
+  <body></body>
+</html>

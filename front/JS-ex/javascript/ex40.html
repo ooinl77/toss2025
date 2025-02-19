@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>마우스클릭 이벤트</title>
+    <script>
+      //버튼A가 클릭될때, count-a에 현재 카운트를 +1를 올리시오.
+      //버튼B가 클릭될때, count-b에 현재 카운트를 +1를 올리시오.
+      window.onload = function () {
+        let button_a = document.getElementById("button-a");
+        let button_b = document.getElementById("button-b");
+        let count_a = document.getElementById("counter-a");
+        let count_b = document.getElementById("counter-b");
+
+        button_a.onclick = () => {
+          let c = Number(count_a.innerText);
+          c += 1;
+
+          count_a.innerHTML = c;
+        };
+        button_b.onclick = () => {
+          let c1 = Number(count_b.innerText);
+          c1 += 1;
+
+          count_b.innerHTML = c1;
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <button id="button-a">ButtonA</button>
+    <button id="button-b">ButtonB</button>
+    <h1>Button A - <span id="counter-a">7</span></h1>
+    <h1>Button B - <span id="counter-b">3</span></h1>
+  </body>
+</html>

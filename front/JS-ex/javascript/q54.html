@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let num = prompt("").split(" ");
+      let flag = true;
+      for (let i = 0; i < num.length - 1; i++) {
+        if (num[i] > num[i + 1]) {
+          flag = false;
+          break;
+        }
+      }
+      if (flag) console.log("yes");
+      else console.log("n");
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let input = Number(prompt(""));
+
+      let shake = 0;
+      let fibo = 0;
+      let people = 0;
+      let s = 0;
+      while (input > shake) {
+        people++;
+        shake += fibo;
+        fibo++;
+        console.log(people, shake, fibo);
+      }
+      s = input - (shake - (fibo - 1));
+      console.log(s, people);
+    </script>
+  </head>
+  <body></body>
+</html>

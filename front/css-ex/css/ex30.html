@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>box-sizing 속성</title>
+    <!-- width, height의 기준을 설정 -->
+    <!-- content-box : 기본. 콘텐츠의 너비/높이 기준 -->
+    <!-- border-box : 콘텐츠+패딩+테두리선까지를 너비/높이로 -->
+    <!-- content-box 속성으로는 패딩+테두리선 굵기까지 고려해야 하는 복잡함 -->
+    <!-- *-------------*    *- -->
+    <!-- |   *------*  |    |  -->
+    <!-- | P |  C   |  B  M |  -->
+    <!-- |   *------*  |    |  -->
+    <!-- *-------------*    *- -->
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        border: 10px solid black;
+        /* 콘텐츠가 크기 이상 넘어가면 자른다.(숨긴다) */
+        overflow: hidden;
+        margin: 10px;
+        padding: 10px;
+      }
+      div:nth-child(1) {
+        box-sizing: content-box; /* w,h = c */
+        background-color: aquamarine;
+      }
+      div:nth-child(2) {
+        box-sizing: border-box; /* w,h = c + p + b */
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+  <body>
+    content-box : w,h = 콘텐츠 크기
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odio quos
+      magnam! Fuga natus culpa illum eligendi necessitatibus! Veritatis sint
+      corporis labore ipsam temporibus magnam debitis, hic sequi aut possimus.
+    </div>
+    border-box : w,h = 콘텐츠 + 패딩 + 테두리선
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo itaque
+      voluptatibus soluta eaque repellendus, rerum libero labore voluptatum
+      numquam necessitatibus fugiat iste dolorum harum, provident cumque
+      voluptas recusandae, eos culpa!
+    </div>
+  </body>
+</html>

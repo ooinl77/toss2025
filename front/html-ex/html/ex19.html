@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력태그의 종류3</title>
+  </head>
+  <body>
+    <form accept="http://www.myserver.com">
+      <!-- type:hidden 숨김 속성, 사용자에게는 보이지 않고, 서버에는 입력값이 전달-->
+      <input type="hidden" name="hiddenVal" value="게시물 아이디" />
+      <br />
+      <!-- 선택목록 태그 : select태그-->
+      <select name="drink">
+        <option value="1">콜라</option>
+        <option value="2" selected>사이다</option>
+        <option value="3">쥬스</option>
+      </select>
+      <hr />
+      <!-- 색상 선택 태그 -->
+      <input type="color" name="color" value="#FF0000" />
+      <br />
+      <!-- 날짜선택 태그 -->
+      <input type="date" name="date" value="2025-01-06" />
+      <br />
+      <!-- 날짜시간 선택 태그 -->
+      <input
+        type="datetime-local"
+        name="datetime"
+        value="2025-01-06T12:27:00"
+      />
+      <br />
+      <!-- email -->
+      <input type="email" name="email" value="abc@gmail.com" />
+      <br />
+      <!-- email 다중선택 -->
+      <input
+        type="email"
+        name="email"
+        value="abc@gmail.com, 123@gmail.com"
+        multiple
+      />
+      <br />
+      <!-- 달(Month) -->
+      <input type="month" name="month" value="2025-01" />
+      <br />
+      <!-- 숫자(Number) -->
+      <input type="number" name="number" value="10" min="5" max="10" step="2" />
+      <br />
+      <!-- 범위 -->
+      <input type="range" value="1" min="1" max="5" step="1" />
+      <br />
+      <!-- 많은 양의 텍스트를 입력받을 때 : textarea 태그-->
+      <textarea name="memo" cols="30" rows="10">
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi facilis doloribus recusandae tempore! Quidem omnis quibusdam architecto exercitationem nostrum sequi minus tenetur deserunt? Maxime, quo sunt nihil repudiandae velit atque!
+      </textarea>
+    </form>
+  </body>
+</html>

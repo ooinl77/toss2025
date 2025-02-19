@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 출력 : img태그</title>
+    <style>
+      #play-button {
+        background-image: url("play-button.png");
+        background-repeat: no-repeat;
+        width: 128px;
+        height: 128px;
+        border: none;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="image1.jpg" alt="카페이미지1" />
+    <img src="image2.jpg" alt="카페이미지2" />
+    <br />
+    <a href="#" download="image1.jpg">img1 다운로드</a>
+    <br />
+    <button>
+      <img src="play-button.png" alt="버튼" />
+    </button>
+    <button id="play-button"></button>
+    <img src="http://via.placeholder.com/600x300" />
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let a = [1, 2, 3, 4];
+      let b = ["a", "b", "c", "d"];
+      let flag = true;
+      let temp = [];
+      for (let i = 0; i < a.length; i++) {
+        temp[i] = [];
+        if (flag) {
+          temp[i][0] = a[i];
+          temp[i][1] = b[i];
+          flag = false;
+        } else {
+          temp[i][0] = b[i];
+          temp[i][1] = a[i];
+          flag = true;
+        }
+      }
+      console.log(temp);
+    </script>
+  </head>
+  <body></body>
+</html>

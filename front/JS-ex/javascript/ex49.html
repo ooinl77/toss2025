@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력폼 데이터 유효성 확인하기</title>
+
+    <script>
+      //데이터 유효성 확인하기
+      //1. 프론트앤드에서 확인
+      // 2. 백엔드에서 처리하기
+
+      //프론트에서 유효성 확인
+      //1. form태그의 onsubmit 함수 이름
+      //2. js에서 유효성 확인 후 직접 form.submit함수를 호출'
+      //3. js에서 유효성 확인 후 fetch함수(axios함수)로 직접 서버 통신
+      function checkValue1() {
+        let inputName = document.getElementById("name");
+        if (inputName.value) {
+          //값이 있으면
+
+          return true; //form통신 정상 통신
+        } else {
+          //값 없으면
+          alert("아이디가 없습니다.");
+          return false; //통신 취소[]
+        }
+      }
+      function checkValue2() {
+        let form = document.myFormName;
+        console.log(form);
+        let inputName = document.getElementById("name");
+        if (!inputName || inputName.value.length < 2) {
+          alert("아이디가 비어있거나 2자 이하입니다.");
+          return;
+        }
+        form.submit();
+
+        fetch("http://myserver.com", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            //json객체를 문자열로 변환해주는 함수
+            name: "hong", //inputName.value
+            pass: "1234", //inputPass.value
+          }),
+        })
+          .then((res) => res.json()) //json(): 문자열을 js 객체로 변환
+          .then((data) => {
+            console.log(data);
+            myFunc();
+          })
+          .catch((err) => console.error("Error", err));
+        function myFunc() {}
+      }
+    </script>
+  </head>
+  <body>
+    <form
+      id="myForm"
+      name="myFormName"
+      action="http://www.myserver.com"
+      onsubmit="return checkValue1()"
+    >
+      <laber for="name">이름</laber><br />
+      <input type="text" id="name" name="name" /><br />
+      <label for="pass">비밀번호</label><br />
+      <input type="password" id="pass" name="pass" /><br />
+      <label for="pass-check">비밀번호 확인</label><br />
+      <input type="password" id="pass-check" name="pass-check" /><br />
+      <br />
+      <button type="submit">로그인(submit)</button>
+      <br /><br />
+      <button type="button" onclick="checkValue2()">로그인(button)</button>
+    </form>
+  </body>
+</html>

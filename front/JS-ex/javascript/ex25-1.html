@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      student = {
+        국어: 70,
+        수학: 80,
+        영어: 90,
+        sum: (a, b, c) => {
+          return a + b + c;
+        },
+        avg: (sum) => {
+          return sum / 3;
+        },
+      };
+      let a = student.국어;
+      let b = student.수학;
+      let c = student.영어;
+      let sum = student.sum(a, b, c);
+      let avg = student.avg(sum);
+      console.log(a);
+      console.log(b);
+      console.log(c);
+      console.log(sum);
+      console.log(avg);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let time = ["12:30", "13:20", "14:43"];
+      let t = "12:40".split(":");
+      let h = 0;
+      let m = 0;
+      let print = [];
+      for (let i of time) {
+        let temp = i.split(":");
+        h = temp[0] - t[0];
+        m = temp[1] - t[1];
+        if (h < 0 || (h == 0 && m < 0)) {
+          print[i] = "지나갔습니다.";
+        } else if (h > 0 && m < 0) {
+          h -= 1;
+          m += 60;
+          if (h < 10) {
+            h = "0" + h;
+          }
+          if (m < 10) {
+            m = "0" + m;
+          }
+          print[i] = h + "시간 " + m + "분";
+        } else {
+          if (h < 10) {
+            h = "0" + h;
+          }
+          if (m < 10) {
+            m = "0" + m;
+          }
+          print[i] = h + "시간 " + m + "분";
+        }
+      }
+      console.log(print);
+    </script>
+  </head>
+  <body></body>
+</html>

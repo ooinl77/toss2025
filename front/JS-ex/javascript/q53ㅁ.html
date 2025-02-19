@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let str = prompt("").split(" ");
+      let temp = [];
+      for (let item of str) {
+        if (item == "(" || item == "{" || item == "[") temp.push(item);
+        else if (temp[0] == "(" && item == ")") {
+          temp.shift();
+        } else if (temp[0] == "[" && item == "]") {
+          temp.shift();
+        } else if (temp[0] == "[" && item == "]") {
+          temp.shift();
+        } else {
+          temp.push(item);
+        }
+        console.log(temp);
+      }
+      if (temp.length == 0) console.log("yes");
+      else console.log("no");
+    </script>
+  </head>
+  <body></body>
+</html>

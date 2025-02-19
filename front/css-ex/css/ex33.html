@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position속성</title>
+    <!-- 웹 페이지 만드는 과정 -->
+    <!-- 화면 레이아웃(배치) - 박스모델 -->
+    <!-- 
+  1. html 태그
+  2. 시멘틱태그(header, footer, main, section, aside, article) 
+  3. div태그 다 넣는다.
+  4. block, inline, inline-block 
+  5. flexbox 정렬/배치 : float속성(잘 사용하지 않음)
+  6. width, height
+  7. overflow: hidden
+  8. 마진, 패딩
+  9. position-->
+
+    <!-- position
+   1. static : 기본값, 순차적으로 쌓이는 방식
+   2. relative : 상대좌표에 위치(자기위치)
+   3. absolute : 절대좌표에 위치(기준 : relative, absolute, fixed있는 부모태그)
+   4. fixed : 고정좌표 : 뷰포트(웹화면) 기준
+   5. sticky : 특정 스크롤 위치에 고정-->
+
+    <!-- 
+   10. top, bottom, left, right : static은 적용되지 않음. -->
+    <style>
+      #static-box {
+        background-color: antiquewhite;
+      }
+      #relative-box {
+        position: relative;
+        background-color: coral;
+        top: 10px;
+        left: 10px;
+        z-index: 10;
+      }
+      #container {
+        position: relative;
+        background-color: rgb(181, 235, 99);
+        height: 100px;
+      }
+      #absolute-box {
+        position: absolute;
+        color: white;
+        top: 10px;
+        left: 10px;
+        background-color: aquamarine;
+      }
+      #fixed-box {
+        background-color: darkorange;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+      }
+      #sticky-box {
+        background-color: lightpink;
+        top: 0px;
+        position: sticky;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="static-box">Static</div>
+    <div id="relative-box">Relative</div>
+    <div id="container">
+      <div id="absolute-box">Absolute</div>
+    </div>
+    <div id="fixed-box">Fixed</div>
+    <div id="sticky-box">Sticky</div>
+    <div>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit tempora,
+      fugit a ipsa sint reiciendis obcaecati veniam? Excepturi maiores laborum
+      libero, non dignissimos eos, ducimus ipsam possimus veniam minima
+      est?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+      veritatis, aliquam recusandae, obcaecati nostrum non at porro tenetur sed
+      magnam minima perspiciatis, nobis placeat ex. Quaerat enim perspiciatis
+      error veniam!Loremlo
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+      laborum ipsam ea ullam eum eos vero nesciunt dicta excepturi eligendi eius
+      assumenda eaque perspiciatis iure molestiae, quis asperiores voluptas
+      saepe?
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod porro
+      facilis sit eius iure odio. At temporibus, minima ducimus alias maiores
+      voluptate ratione dolor natus atque delectus explicabo, nisi molestias?
+    </div>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시멘틱 태그</title>
+    <!-- semantic 의미론적
+   웹페이지의 공통적인 공간 구성요소를 태그형식으로 분류한 것
+   공통적인 구성요소 : 헤더(header), 푸터(footer), 메인(section), 사이드(side), 네비게이션바(nav)
+   div태그와 기능적으로 똑같다.
+   header : 상단공간
+   nav : 네비게이션(메뉴)
+   main : 주 콘텐츠 공간(section + aside)
+   section : 주된 콘텐츠
+   aside : 사이트(왼쪽, 오른쪽) 공간 -->
+    <!-- *-----------------* -->
+    <!-- |   Header(Top)   | -->
+    <!-- *-----------------* -->
+    <!-- |        Nav      | -->
+    <!-- *-----------------*      -->
+    <!-- |      |          |      -->
+    <!-- |Aside | Section  | Main -->
+    <!-- |      |          |      -->
+    <!-- *-----------------* -->
+    <!-- |      Footer     | -->
+    <!-- *-----------------* -->
+    <style>
+      * {
+        border: 1px solid red;
+      }
+      ul,
+      li {
+        display: inline;
+      }
+      section {
+        float: right;
+        width: 80%;
+      }
+      aside {
+        float: left;
+        width: 18%;
+      }
+      footer {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <header>헤더영역</header>
+    <nav>
+      <ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+          dolore mollitia omnis modi maiores eaque eligendi, quo deleniti
+          praesentium quas excepturi quia laborum! At, voluptatibus facilis.
+          Consectetur quae aperiam vel.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+          dolore mollitia omnis modi maiores eaque eligendi, quo deleniti
+          praesentium quas excepturi quia laborum! At, voluptatibus facilis.
+          Consectetur quae aperiam vel.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+          dolore mollitia omnis modi maiores eaque eligendi, quo deleniti
+          praesentium quas excepturi quia laborum! At, voluptatibus facilis.
+          Consectetur quae aperiam vel.
+        </p>
+      </section>
+      <aside>사이드</aside>
+    </main>
+    <footer>푸터영역</footer>
+  </body>
+</html>

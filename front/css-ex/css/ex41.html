@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vertical-align속성</title>
+    <!-- 수직정렬은 가능하면 flexbox를 사용하기 권장 -->
+    <!-- inline 요소에만 적용가능. block요소는 정렬안됨. -->
+    <style>
+      body {
+        border: 1px solid lightcoral;
+      }
+      h3 {
+        border: 1px solid lightseagreen;
+        text-align: center;
+        vertical-align: middle;
+      }
+      #box1 {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box1">
+      <h3>가운데로 보내주세요</h3>
+    </div>
+  </body>
+</html>

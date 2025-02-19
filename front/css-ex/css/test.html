@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgba(208, 212, 229, 0.326);
+        margin: 0;
+        padding: 0;
+      }
+      /* 초기화 */
+      .wrapper {
+        /* HTML5 display-role reset for older browsers */
+
+        ol,
+        ul {
+          list-style: none;
+        }
+      }
+      /* 데스크탑 */
+      @media screen and (min-width: 1024px) {
+        .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: white;
+          box-shadow: 0 5px 10px rgba(201, 200, 200, 0.937);
+          margin: 0;
+        }
+        .title-icon {
+          color: rgba(0, 0, 255, 0.77);
+          font-weight: bold;
+          font-size: 38px;
+          margin: 20px 30px;
+        }
+        .nav {
+          margin: 20px 30px;
+        }
+        .nav-ul {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 80px;
+        }
+        .nav-item {
+          position: relative;
+          padding-bottom: 10px;
+        }
+        .nav-item-list {
+          font-size: 25px;
+          color: rgb(130, 130, 130);
+        }
+        .nav-teim-list-dropdown-ul {
+          padding: 0;
+        }
+        .nav-item:hover .nav-item-list-dropdown {
+          display: block;
+        }
+        .nav-item-list-dropdown {
+          position: absolute;
+          display: none;
+          background-color: white;
+          padding: none;
+          width: 300px;
+          box-shadow: 0px 0px 10px rgba(201, 200, 200, 0.937);
+          border-radius: 10px;
+          margin-top: 10px;
+          margin-left: -15px;
+        }
+        .dropdown-list {
+          color: rgb(130, 130, 130);
+          font-size: 25px;
+          padding: 15px 20px;
+        }
+        .dropdown-list:hover {
+          background-color: rgba(144, 180, 251, 0.367);
+        }
+        .main {
+          margin: 30px 10px;
+          display: flex;
+          flex-flow: column;
+          gap: 10px;
+          margin: 25px;
+        }
+        .main h2 {
+          font-size: 40px;
+        }
+        .section {
+          margin: 0 10px;
+          display: flex;
+          justify-content: space-between;
+          flex-grow: 1;
+          gap: 40px;
+        }
+        .item-card {
+          display: flex;
+          flex-flow: column;
+          justify-content: ;
+
+          flex-basis: 100%;
+          background-color: white;
+          border: 1px solid rgba(149, 149, 149, 0.252);
+          border-radius: 20px;
+          padding: 10px 30px 20px;
+        }
+        .item-card-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: -20px;
+        }
+        .item-card-header-title {
+          font-size: 28px;
+          font-weight: bold;
+        }
+        .item-card-header-price {
+          color: rgb(43, 67, 249);
+          font-weight: bold;
+          font-size: 24px;
+        }
+        .item-card-content {
+          font-size: 20px;
+          color: rgb(149, 149, 149);
+        }
+        .item-card-footer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 5px;
+        }
+        .item-card-footer-label {
+          background-color: rgba(144, 180, 251, 0.367);
+          color: rgba(0, 0, 255, 0.663);
+          padding: 5px 10px;
+          border-radius: 15px;
+          font-size: 18px;
+        }
+        .item-card-footer-button {
+          color: white;
+          background-color: rgba(29, 77, 253, 0.745);
+          padding: 9px 15px;
+          border-radius: 10px;
+          width: 160px;
+          font-size: 18px;
+        }
+      }
+      /* 테블릿 */
+      @media screen and (min-width: 768px) and (max-width: 1023px) {
+        .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: white;
+          box-shadow: 0 5px 10px rgba(201, 200, 200, 0.937);
+          margin: 0;
+        }
+        .title-icon {
+          color: rgba(0, 0, 255, 0.77);
+          font-weight: bold;
+          font-size: 38px;
+          margin: 20px 30px;
+        }
+        .nav {
+          margin: 20px 30px;
+        }
+        .nav-ul {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 80px;
+        }
+        .nav-item {
+          position: relative;
+          padding-bottom: 10px;
+        }
+        .nav-item-list {
+          font-size: 25px;
+          color: rgb(130, 130, 130);
+        }
+        .nav-teim-list-dropdown-ul {
+          padding: 0;
+        }
+        .nav-item:hover .nav-item-list-dropdown {
+          display: block;
+        }
+        .nav-item-list-dropdown {
+          position: absolute;
+          display: none;
+          background-color: white;
+          padding: none;
+          width: 300px;
+          box-shadow: 0px 0px 10px rgba(201, 200, 200, 0.937);
+          border-radius: 10px;
+          margin-top: 10px;
+          margin-left: -15px;
+        }
+        .dropdown-list {
+          color: rgb(130, 130, 130);
+          font-size: 25px;
+          padding: 15px 20px;
+        }
+        .dropdown-list:hover {
+          background-color: rgba(144, 180, 251, 0.367);
+        }
+        .main {
+          margin: 30px 10px;
+          display: flex;
+          flex-flow: column;
+          gap: 10px;
+          margin: 25px;
+        }
+        .main h2 {
+          font-size: 40px;
+        }
+        .section {
+          margin: 0px;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+
+          flex-grow: 1;
+          gap: 40px;
+        }
+        .item-card {
+          display: flex;
+          flex-flow: column;
+
+          flex: 1; /* flex-grow를 활성화하여 가변적인 크기 지원 */
+          min-width: 270px; /* 최소 크기 설정 */
+          max-width: 350px; /* 최대 크기 설정 */
+          background-color: white;
+          border: 1px solid rgba(149, 149, 149, 0.252);
+          border-radius: 20px;
+          padding: 10px 30px 20px;
+        }
+        .item-card-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: -20px;
+        }
+        .item-card-header-title {
+          font-size: 22px;
+          font-weight: bold;
+        }
+        .item-card-header-price {
+          color: rgb(43, 67, 249);
+          font-weight: bold;
+          font-size: 19px;
+        }
+        .item-card-content {
+          font-size: 13px;
+          color: rgb(149, 149, 149);
+        }
+        .item-card-footer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 5px;
+        }
+        .item-card-footer-label {
+          background-color: rgba(144, 180, 251, 0.367);
+          color: rgba(0, 0, 255, 0.663);
+          padding: 5px 10px;
+          border-radius: 15px;
+          font-size: 14px;
+        }
+        .item-card-footer-button {
+          color: white;
+          background-color: rgba(29, 77, 253, 0.745);
+          padding: 9px 15px;
+          border-radius: 10px;
+          width: 130px;
+          font-size: 13px;
+        }
+      }
+      /* 모바일 */
+      @media screen and (max-width: 767px) {
+        .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: white;
+          box-shadow: 0 5px 10px rgba(201, 200, 200, 0.937);
+          margin: 0;
+        }
+        .title-icon {
+          color: rgba(0, 0, 255, 0.77);
+          font-weight: bold;
+          font-size: 38px;
+          margin: 20px 30px;
+        }
+        .nav {
+          margin: 20px 30px;
+          display: none;
+        }
+        .nav-ul {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 80px;
+        }
+        .nav-item {
+          position: relative;
+          padding-bottom: 10px;
+        }
+        .nav-item-list {
+          font-size: 25px;
+          color: rgb(130, 130, 130);
+        }
+        .nav-teim-list-dropdown-ul {
+          padding: 0;
+        }
+        .nav-item:hover .nav-item-list-dropdown {
+          display: block;
+        }
+        .nav-item-list-dropdown {
+          position: absolute;
+          display: none;
+          background-color: white;
+          padding: none;
+          width: 300px;
+          box-shadow: 0px 0px 10px rgba(201, 200, 200, 0.937);
+          border-radius: 10px;
+          margin-top: 10px;
+          margin-left: -15px;
+        }
+        .dropdown-list {
+          color: rgb(130, 130, 130);
+          font-size: 25px;
+          padding: 15px 20px;
+        }
+        .dropdown-list:hover {
+          background-color: rgba(144, 180, 251, 0.367);
+        }
+        .main {
+          margin: 30px 10px;
+          display: flex;
+          flex-flow: column;
+          gap: 10px;
+          margin: 25px;
+        }
+        .main h2 {
+          font-size: 40px;
+        }
+        .section {
+          margin: 0 10px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          flex-grow: 1;
+          gap: 40px;
+        }
+        .item-card {
+          display: flex;
+          flex-flow: column;
+
+          flex-basis: 100%;
+          background-color: white;
+          border: 1px solid rgba(149, 149, 149, 0.252);
+          border-radius: 20px;
+          padding: 10px 30px 20px;
+        }
+        .item-card-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: -20px;
+        }
+        .item-card-header-title {
+          font-size: 28px;
+          font-weight: bold;
+        }
+        .item-card-header-price {
+          color: rgb(43, 67, 249);
+          font-weight: bold;
+          font-size: 24px;
+        }
+        .item-card-content {
+          font-size: 20px;
+          color: rgb(149, 149, 149);
+        }
+        .item-card-footer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 5px;
+        }
+        .item-card-footer-label {
+          background-color: rgba(144, 180, 251, 0.367);
+          color: rgba(0, 0, 255, 0.663);
+          padding: 5px 10px;
+          border-radius: 15px;
+          font-size: 18px;
+        }
+        .item-card-footer-button {
+          color: white;
+          background-color: rgba(29, 77, 253, 0.745);
+          padding: 9px 15px;
+          border-radius: 10px;
+          width: 160px;
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="title-icon">TechStore</div>
+        <div class="nav">
+          <ul class="nav-ul">
+            <li class="nav-item">
+              <a class="nav-item-list">제품</a>
+              <div class="nav-item-list-dropdown">
+                <ul class="nav-teim-list-dropdown-ul">
+                  <li class="dropdown-list">전자기기</li>
+                  <li class="dropdown-list">의류</li>
+                  <li class="dropdown-list">도서</li>
+                  <li class="dropdown-list">액세서리</li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-item-list">서비스</a>
+              <div class="nav-item-list-dropdown">
+                <ul class="nav-teim-list-dropdown-ul">
+                  <li class="dropdown-list">컨설팅</li>
+                  <li class="dropdown-list">교육</li>
+                  <li class="dropdown-list">고객지원</li>
+                  <li class="dropdown-list">유지보수</li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-item-list">회사소개</a>
+              <div class="nav-item-list-dropdown">
+                <ul class="nav-teim-list-dropdown-ul">
+                  <li class="dropdown-list">회사정보</li>
+                  <li class="dropdown-list">팀 소개</li>
+                  <li class="dropdown-list">채용정보</li>
+                  <li class="dropdown-list">연락처</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main">
+        <h2>추천 제품</h2>
+        <div class="section">
+          <div class="item-card">
+            <div class="item-card-header">
+              <h3 class="item-card-header-title">프리미엄 노트북</h3>
+              <div class="item-card-header-price">1,599,000원</div>
+            </div>
+            <div class="item-card-content">
+              <p class="item-card-content-p">최신 사양의 고성능 노트북</p>
+            </div>
+            <div class="item-card-footer">
+              <div class="item-card-footer-label">전자기기</div>
+              <button class="item-card-footer-button">장바구니 담기</button>
+            </div>
+          </div>
+          <div class="item-card">
+            <div class="item-card-header">
+              <h3 class="item-card-header-title">무선 헤드폰</h3>
+              <div class="item-card-header-price">299,000원</div>
+            </div>
+            <div class="item-card-content">
+              <p class="item-card-content-p">
+                프리미엄 사운드의 노이즈 캔슬링 헤드폰
+              </p>
+            </div>
+            <div class="item-card-footer">
+              <div class="item-card-footer-label">전자기기</div>
+              <button class="item-card-footer-button">장바구니 담기</button>
+            </div>
+          </div>
+          <div class="item-card">
+            <div class="item-card-header">
+              <h3 class="item-card-header-title">스마트 워치</h3>
+              <div class="item-card-header-price">399,000원</div>
+            </div>
+            <div class="item-card-content">
+              <p class="item-card-content-p">
+                피트니스 트래킹과 스마트 연결 기능
+              </p>
+            </div>
+            <div class="item-card-footer">
+              <div class="item-card-footer-label">액세서리</div>
+              <button class="item-card-footer-button">장바구니 담기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

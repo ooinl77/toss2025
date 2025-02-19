@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제</title>
+    <style>
+      .wrap {
+        width: 80%;
+        min-width: 320px;
+        height: 100%;
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: column;
+      }
+      .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        padding-left: 10px;
+      }
+      #kakao {
+        width: 130px;
+        text-align: center;
+        background-image: url();
+      }
+      .ico {
+        background: url("ico_comm.png") 0 0 no-repeat;
+        color: transparent;
+        background-size: 150px auto;
+        background-position: -130px -125px;
+        font-size: 1px;
+        width: 20px;
+        height: 20px;
+      }
+      #main {
+        border: 1px solid #c9c5c5;
+        padding: 80px 50px;
+      }
+      .account {
+        display: flex;
+        flex-flow: column;
+        justify-content: stretch;
+        align-items: center;
+      }
+      .account input[type="text"],
+      .account input[type="password"] {
+        border: none;
+        border-bottom: 1px solid #c9c5c5;
+        width: 100%;
+        padding: 9px;
+      }
+
+      .login {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .login input {
+        width: 100%;
+        border: none;
+        margin: 20px;
+        font-size: 17px;
+        height: 60px;
+      }
+      .login input#l {
+        background-color: rgb(255, 226, 3);
+        margin-bottom: 25px;
+      }
+      .a {
+        display: flex;
+        justify-content: flex-start;
+        gap: 5px;
+        color: #787878;
+      }
+      .or {
+        width: 150px;
+        text-align: center;
+        color: #787878;
+      }
+      .aside {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        font-size: 13px;
+      }
+      .aside .signin {
+        flex-grow: 1;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:link {
+        color: black;
+      }
+      .footer {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        font-size: 14px;
+        margin-bottom: 100px;
+      }
+      .corp {
+        color: black;
+        display: flex;
+        gap: 20px;
+        margin-bottom: 10px;
+      }
+      .bar {
+        color: #787878;
+      }
+      hr {
+        display: inline-block;
+        color: #787878;
+      }
+      #barr {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+      .sidebar {
+        flex-grow: 1;
+        width: 100%;
+        height: 1px;
+        background-color: #78787829;
+      }
+      select {
+        border-width: 0px;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="header">
+        <img src="logo_kakao.png" id="kakao" />
+      </div>
+      <div id="main">
+        <div class="account">
+          <input
+            type="text"
+            placeholder="카카오메일 아이디, 이메일 전화번호"
+          /><br />
+          <input type="password" placeholder="비밀번호" /><br />
+        </div>
+        <div class="a">
+          <input type="radio" id="login" /><label for="login"
+            >로그인 상태 유지</label
+          >
+          <span class="ico">도움</span>
+        </div>
+        <div class="login">
+          <input type="button" name="" id="l" value="로그인" />
+          <div id="barr">
+            <div class="sidebar"></div>
+            <span class="or">또는</span>
+            <div class="sidebar"></div>
+          </div>
+          <input type="button" value="QR코드 로그인" />
+        </div>
+        <div class="aside">
+          <a href="#" class="signin">회원가입</a>
+          <a href="#">계정 찾기</a>
+          <span class="bar">|</span>
+          <a href="#">비밀번호 찾기</a>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="corp">
+          <a href="#">이용약관</a>
+          <a href="#">개인정보 처리방침</a>
+          <a href="#">운영정책</a>
+          <a href="#">고객센터</a>
+          <a href="#">공지사항</a>
+          <select>
+            <option>한국어</option>
+            <option>English</option>
+            <option>日本語</option>
+          </select>
+        </div>
+        <a href="#">Copyright Kakao Corp. All rights reserved</a>
+      </div>
+    </div>
+  </body>
+</html>

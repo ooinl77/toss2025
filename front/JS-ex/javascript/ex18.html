@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제</title>
+    <script>
+      let sum = 0;
+      let max = 0;
+      document.write("문제 1<br>");
+      for (let i = 1; i <= 10; i++) {
+        document.write(i + " ");
+      }
+      document.write("<br>");
+      document.write("<br>");
+      document.write("문제 2<br>");
+      for (let i = 1; i <= 10; i += 2) {
+        document.write(i + " ");
+      }
+      document.write("<br>");
+      document.write("<br>");
+
+      document.write("문제 3<br>");
+      for (let i = 3; i <= 10; i += 3) {
+        document.write(i + " ");
+      }
+      document.write("<br>");
+      document.write("<br>");
+
+      document.write("문제 4<br>");
+      for (let i = 1; i <= 100; i++) {
+        sum += i;
+      }
+      // 문자열 보간 : 문자열 안에 변수를 넣는 법
+      // 백틱 : `` - 숫자 1 왼쪽 키
+      // ex) `sum = ${sum}<br> `
+      document.write("총합 = " + sum + "<br>");
+      document.write("<br>");
+
+      document.write("문제 5<br>");
+      for (let i = 1; i <= 10; i++) {
+        let rand = Math.floor(Math.random() * 6) + 1;
+        document.write(rand + " ");
+      }
+      document.write("<br>");
+      document.write("<br>");
+
+      document.write("문제 6<br>");
+      for (let i = 1; i <= 100; i++) {
+        let rand = Math.floor(Math.random() * 100) + 1;
+        if (max < rand) {
+          max = rand;
+        }
+      }
+      document.write(max + " ");
+      const dataArray = {
+        메뉴이름31: 1,
+        메뉴이름35: 1,
+        메뉴이름36: 1,
+        메뉴이름40: 1,
+        메뉴이름41: 1,
+      };
+
+      {
+        Object.entries(dataArray).map((item) => console.log(item));
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

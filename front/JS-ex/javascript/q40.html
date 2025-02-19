@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let length = 0;
+      let val = "";
+      var names = ["장미", "수선화", "코스모스"];
+      names.forEach((a) => {
+        console.log(a);
+        if (a.length > length) {
+          length = a.length;
+          val = a;
+        }
+      });
+      console.log("가장 긴 단어는 " + val + "입니다.");
+    </script>
+  </head>
+  <body></body>
+</html>

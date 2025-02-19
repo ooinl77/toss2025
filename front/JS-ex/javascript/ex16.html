@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //switch문 형식
+      //switch( number, string, 논리형 ) {
+      //case A:
+      //    실행문;
+      //    break;
+      //case B:
+      //    실행문;
+      //    break;
+      //default:
+      //    실행문;
+      //}
+      let dice = Math.floor(Math.random() * 6) + 1;
+      document.write("dice = " + dice + "<br>");
+      switch (dice) {
+        case 2:
+        case 4:
+        case 6:
+          document.write("짝수<br>");
+          break;
+        case 1:
+        case 3:
+        case 5:
+          document.write("홀수<br>");
+          break;
+        default:
+      }
+
+      let dice1 = Math.floor(Math.random() * 6) + 1;
+      let dice2 = Math.floor(Math.random() * 6) + 1;
+      document.write("dice1 = " + dice1 + "<br>");
+      document.write("dice2 = " + dice2 + "<br>");
+
+      document.write("출력 = " + (dice1 * 10 + dice2) + "<br>");
+    </script>
+  </head>
+  <body></body>
+</html>

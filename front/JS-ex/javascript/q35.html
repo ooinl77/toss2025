@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let str = prompt("").split(" ");
+      let max = 0;
+      let name = "";
+      let obj = str.reduce((acc, cur, index) => {
+        if (acc[cur]) {
+          acc[cur] += 1;
+        } else {
+          acc[cur] = 1;
+        }
+
+        if (acc[cur] > max) {
+          max = acc[cur];
+          name = cur;
+        }
+
+        return acc;
+      }, {});
+
+      console.log(`${name}이 총 ${max}표로 반장이 되었습니다.`);
+    </script>
+  </head>
+  <body></body>
+</html>

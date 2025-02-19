@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //js객체
+      //key : 반드시 문자열(쌍따옴표 사용안함) - json key "key"
+      //value : 다양한 타입(number, string, function, object, ...)
+      //객체 선언
+      let object = {
+        apple: 1000,
+        banana: 2000,
+      };
+      console.log(object["apple"]);
+      console.log(object.apple);
+
+      let person = {
+        name: "홍길동",
+        age: 30,
+        action: () => {
+          console.log("액션배우입니다.");
+        },
+        obj: object,
+      };
+      person.action();
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let input = Number(prompt(""));
+      let flag = true;
+      let count = 0;
+      while (input > 0) {
+        if (input >= 7) {
+          input -= 7;
+          count++;
+        } else if (input >= 0) {
+          if (input - 3 < 0) {
+            flag = false;
+            console.log(-1);
+            break;
+          }
+          input -= 3;
+          count++;
+        }
+      }
+      if (flag) console.log(count);
+    </script>
+  </head>
+  <body></body>
+</html>

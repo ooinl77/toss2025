@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let num = Number(prompt(""));
+      let temp = [];
+      let str = "";
+      while (num >= 1) {
+        temp.push(Math.floor(num % 2));
+        num /= 2;
+      }
+      for (let k of temp.reverse()) {
+        str += k;
+      }
+      console.log(str);
+    </script>
+  </head>
+  <body></body>
+</html>
+15 7 3 1

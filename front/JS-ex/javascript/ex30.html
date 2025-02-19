@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>map함수</title>
+    <script>
+      //배열(리스트) 전체순환하면서 주어진 콜백함수를 통해
+      //새로운 배열을 생성하는 함수.
+      let arr = [10, 20, 30, 40, 50];
+      //전체요소 순환
+      for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+      }
+      for (let i of arr) {
+        console.log(i);
+      }
+      //해당 회차의 아이템
+      arr.forEach((item, index, array) => {
+        console.log(item);
+        console.log(index);
+        console.log(array);
+      });
+      //map함수 : 원본배열은 변경이 없음. 새로운 배열을 만듦
+      let newArr = arr.map((item) => {
+        return item * 2;
+      });
+      console.log(newArr);
+      //실행문이 한줄이면, 중괄호, return, 세미콜론 생략 가능
+      let newArr2 = arr.map((item) => item * 2);
+      let sqrt = arr.map(Math.sqrt);
+      let string = arr.map(String);
+      let nums = arr.map(Number);
+
+      //객체 배열에서 특정 값 추출
+      const users = [
+        { id: 1, name: "hong" },
+        { id: 2, name: "park" },
+        { id: 3, name: "lee" },
+      ];
+      const userNames = users.map((user) => user.name);
+      console.log(userNames);
+
+      let newNames = [];
+      for (const user of users) {
+        newNames.push(user.name);
+      }
+      console.log(newNames);
+
+      //문자열 배열 반환
+      const upperNames = userNames.map((name) => name.toUpperCase());
+      console.log(upperNames);
+
+      //조건문 사용
+      const newArr3 = arr.map((number) => (number > 30 ? 1 : 0));
+      console.log(newArr3);
+    </script>
+  </head>
+  <body></body>
+</html>

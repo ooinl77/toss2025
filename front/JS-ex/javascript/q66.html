@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let tower = ["ABCDEF", "BCAD", "ADEFQRX", "BEDFG", "EFGHZ"];
+      let rule = "ABD".split("");
+      let index = [];
+      let flag = true;
+      let temp = [];
+
+      for (let i of tower) {
+        flag = true;
+        for (let j in rule) {
+          index[j] = i.indexOf(rule[j]);
+        }
+        console.log(index);
+
+        for (let k = 0; k < index.length - 1; k++) {
+          if (index[k] > index[k + 1]) {
+            if (index[k + 1] == -1) {
+              continue;
+            }
+            temp[i] = "불가능";
+            flag = false;
+            break;
+          }
+        }
+        if (flag) {
+          temp[i] = "가능";
+        }
+      }
+      console.log(temp);
+    </script>
+  </head>
+  <body></body>
+</html>

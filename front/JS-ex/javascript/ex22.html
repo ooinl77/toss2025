@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //자바스크립트에서 배열은 리스트의 기능을 포함
+      //push(): 맨 뒤에 요소 추가
+      //unshift(): 맨 앞에 추가
+      //splice(): 교체(치환)
+      //delete 연산자: 지우고 empty로 남김
+      //pop(): 맨 마지막 지우기
+      //shift(): 맨 처음 지우기
+      //concat(): 배열 결합
+      //sort(): 순정렬(오름차순)
+      //reverse(): 역정렬(내림차순)
+
+      //배열 선언
+      let arr0 = [];
+      let arr1 = [10, 20, 30];
+      let arr2 = new Array();
+      let arr3 = new Array(5);
+      let arr4 = new Array(10, 20, 30);
+      let arr5 = Array.of("11111");
+      let arr6 = Array.from("11111");
+
+      arr0.push(10);
+      arr0.unshift(0);
+      console.log(arr0);
+
+      //지우고 추가(교체)
+      arr6.splice(2, 2, "2");
+      console.log(arr6);
+
+      //지우고 empty로 남겨놓음
+      delete arr6[1];
+      console.log(arr6);
+
+      //마지막 지우기
+      arr6.pop();
+      console.log(arr6);
+
+      //맨 처음 지우기
+      arr6.shift();
+      console.log(arr6);
+
+      //배열 결합
+      let arrA = [10, 20, 30];
+      let arrB = [30, 40, 50];
+      let arrC = arrA.concat(arrB);
+      console.log(arrC);
+
+      //정렬
+      let arrD = [20, 10, 40, 30, 50];
+      let org = [...arrD];
+      let sortedArr = arrD.sort();
+      console.log(sortedArr);
+      console.log(org);
+
+      let reversedArr = arrD.reverse();
+      console.log(reversedArr);
+    </script>
+  </head>
+  <body></body>
+</html>

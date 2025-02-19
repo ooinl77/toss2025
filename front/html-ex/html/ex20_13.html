@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문서제목입니다.</title>
+  </head>
+  <body>
+    <!--문제 13-->
+    <h2>레스토랑 예약하기</h2>
+
+    <form>
+      <fieldset>
+        <legend>예약자 정보</legend>
+        <label for="name">예약자:</label>
+        <input type="text" id="name" /><br />
+        <label for="num">연락처:</label>
+        <input type="tel" id="num" placeholder="000-0000-0000" /><br />
+        <label for="peo">예약인원:</label>
+        <select type="range" id="peo">
+          <option>2명</option>
+          <option>3명</option>
+          <option>4명</option>
+          <option>5인 이상</option></select
+        ><br />
+      </fieldset>
+      <br /><br />
+      <fieldset>
+        <legend>일자 선택 및 시간 선택</legend>
+        <input type="date" /><input type="time" />
+      </fieldset>
+      <br /><br />
+      <input type="submit" value="예약" /><input type="reset" value="취소" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let a = [
+        [1, 2],
+        [2, 4],
+      ];
+
+      let b = [
+        [1, 0],
+        [0, 3],
+      ];
+
+      let temp = [];
+
+      if (a[0].length != b.length) {
+        console.log(-1);
+      } else {
+        for (let i = 0; i < a.length; i++) {
+          temp[i] = [];
+          for (let j = 0; j < a[0].length; j++) {
+            let x = 0;
+            for (let k = 0; k < b.length; k++) {
+              x += a[i][k] * b[k][j];
+            }
+            temp[i].push(x);
+          }
+        }
+        console.log(temp);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
+00 0000 0110 
+01 0001 0111

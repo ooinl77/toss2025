@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reduce</title>
+    <script>
+      //reduce(줄이다): 하나의 값으로 반환
+      const nums = [10, 20, 30, 40, 50];
+
+      //배열의 총합
+      let total = 0;
+      for (const num of nums) {
+        total = total + num;
+      }
+
+      //pre(acc) : 이전값, 누적값(최종반환값)
+      //cur : 현재 요소 값
+      const sum = nums.reduce((pre, cur, index) => {
+        //cur값이 2번째 요소값으로 온다
+        console.log(pre, cur, index);
+
+        return pre + cur;
+      });
+      console.log(sum);
+
+      const sum1 = nums.reduce((pre, cur, index, array) => {
+        console.log(pre, cur, index, array);
+        return pre + cur;
+      }, 0);
+
+      //최대값 구하기
+      let max = Number.MIN_SAFE_INTEGER; //-(2^53 - 1)
+      for (const num of nums) {
+        if (max < num) {
+          max = num;
+        }
+      }
+      console.log(max);
+
+      max = nums.reduce((acc, cur) => {
+        return acc > cur ? acc : cur;
+      });
+      console.log(max);
+
+      //알파벳 갯수 구하기
+      const alphabets = ["a", "a", "c", "c", "c"];
+      let count = alphabets.reduce((acc, cur) => {
+        if (acc[cur]) {
+          acc[cur] += 1;
+        } else {
+          acc[cur] = 1;
+        }
+        return acc;
+      }, {});
+      console.log(count);
+    </script>
+  </head>
+  <body></body>
+</html>

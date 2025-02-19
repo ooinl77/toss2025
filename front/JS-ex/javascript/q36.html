@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let num = prompt("").split(" ");
+      let max = new Set(num.sort().reverse());
+      let index = 0;
+      let count = 0;
+      let obj = num.reduce((acc, cur, index) => {
+        if (acc[cur]) {
+          acc[cur] += 1;
+        } else {
+          acc[cur] = 1;
+        }
+
+        return acc;
+      }, {});
+      for (let i of max) {
+        if (index > 2) {
+          break;
+        }
+        count += obj[i];
+        index++;
+      }
+
+      console.log(count);
+    </script>
+  </head>
+  <body></body>
+</html>
