@@ -10,6 +10,7 @@
   "description": "",
   "dependencies": {
     "ansi-color": "^0.2.1",
+    "body-parser": "^1.20.3",
     "express": "^4.21.2"
   }
 }

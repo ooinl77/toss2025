@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card into Wallet Effect</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+
+      .wallet {
+        width: 250px;
+        height: 150px;
+        background-color: #5c4033;
+        border-radius: 12px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .card {
+        width: 200px;
+        height: 120px;
+        background-color: #007bff;
+        border-radius: 8px;
+        position: absolute;
+        top: -150px; /* 카드를 지갑 위쪽에서 시작 */
+        left: 25px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        transition: top 0.5s ease-in-out;
+      }
+
+      .wallet:hover .card {
+        top: 15px; /* 지갑 안으로 들어가게 설정 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wallet">
+      <div class="card"></div>
+    </div>
+  </body>
+</html>
