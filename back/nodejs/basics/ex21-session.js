@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
   if ((req.session, count)) {
     // 클라에 세션정보(방문횟수 count)가 있는지?
     req.session.count++;
-    res.write("<p>Count:" + req.session + "</p>");
+    res.write("<p>Count:" + req.session.count + "</p>");
     res.send();
   } else {
     //첫방문시
@@ -44,3 +44,5 @@ app.get("/", (req, res) => {
 app.listen(5000, () => {
   console.log("5000번 포트에서 서버 실행 중");
 });
+
+
