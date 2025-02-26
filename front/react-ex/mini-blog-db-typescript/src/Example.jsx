@@ -21,5 +21,10 @@ export const ExampleFunnc = () => {
   const [user, setUser] = useState(null);
   const inputRef = useRef();
 
+  const handleChange = (event) => {
+    console.log(event.target.value);
+    
+  }
+
   return <div></div>;
 };

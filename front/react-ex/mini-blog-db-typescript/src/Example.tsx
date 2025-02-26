@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 
 interface MyButtonProps {
@@ -21,12 +21,27 @@ interface ButtonProps {
   label: string;
 }
 
-export const Button2: React.FC<ButtonProps> = ({ label }) => {
+export const Button2: React.FC<ButtonProps> = ({ label }: ButtonProps) => {
   return <button>{label}</button>;
 };
 
-export const ExampleFunc: React.FC = () => {
-  const [count, setCount] = useState<number>(10);
+interface User {
+  id: number;
+  name: string;
+}
 
+export const ExampleFunc: React.FC = () => {
+  const [count, setCount] = useState<number>(0);
+  const [user, setUser] = useState<User | null>(null);
+  const inputRef = useRef<HTMLInputElement | null>(null);
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(event.target.value);
+    
+  }
+const handleClick = (event: React.MouseEvent<HTMLInputElement>) => {
+  console.log('button clicked');
+  
+}
   return <div></div>;
 };
