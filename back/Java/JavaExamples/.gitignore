@@ -27,3 +27,4 @@ bin/
 
 ### Mac OS ###
 .DS_Storefront/nextjs/weather-app/node_modules/
+front/nextjs/weather-app/node_modules/
